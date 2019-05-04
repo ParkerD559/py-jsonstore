@@ -1,7 +1,7 @@
 from jsonstore import JSONStore
 
 db = JSONStore()
-users = db.table("users")
+users = db.table("users")  # Loads data if table exists, otherwise initializes empty table
 resume = db.table("resume")
 
 users.insert("1", {
