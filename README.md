@@ -7,10 +7,10 @@ pip install jsonstoredb
 Example Usage
 
 ```python
-from jsonstoredb import JSONStore
+from jsonstore import JSONStore
 
 db = JSONStore()
-users = db.table("users")
+users = db.table("users")  # Loads data if table exists, otherwise initializes empty table
 resume = db.table("resume")
 
 users.insert("1", {
@@ -31,5 +31,4 @@ user = users.select("2")
 # user == None
 admins = users.selectBy(lambda val: val["role"] == "admin", limit=None)
 # admins == [('1', {'name': 'admin', 'password': '1234'}), ('10', {'name': 'admin', 'password': 'hunter2'})]
-
 ```
