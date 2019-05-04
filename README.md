@@ -1,7 +1,13 @@
+Intallation
+
+```bash
+pip install jsonstoredb
+```
+
 Example Usage
 
 ```python
-from jsonstore import JSONStore
+from jsonstoredb import JSONStore
 
 db = JSONStore()
 users = db.table("users")
